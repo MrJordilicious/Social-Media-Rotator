@@ -16,7 +16,7 @@ const iconSpan = document.getElementById("social-icon-FA");
 const container = document.getElementById("main-container");
 
 const displayDuration = 5000; // 5 seconds per item
-const repeatDelay = 1 * 60 * 1000; // 15 minutes between full loops
+const repeatDelay = 15 * 60 * 1000; // 15 minutes between full loops
 
 // Get the URL parameters from the current page
 const urlParams = new URLSearchParams(window.location.search);

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+ <!--
+  %%%%%%%@                              @%%%%%%  
+  %%%%%%%%%%%%%%%               %%%%%%%%%%%%%%%  
+  %%%%%%%%%%%%%%%%%%%       %%%%%%%%%%%%%%%%%%%  
+  %%%%%---=====%%%%%%%%%%%%%%%%%%%*******#%%%%%  
+  %%%%%----==========%%%%%%%++++**********%%%%%  
+  %%%%%--#%%%%%%%%%====+++++++%%%%%%%%%%**%%%%%  
+  %%%%%--#%%    %%%%%%%%%%%%%%%%%    %%%**%%%%%  
+  @%%%%--#%%         %%%%%%%         %%%**%%%%%  
+   %%%%--#%%         %%%%%%%         %%%**%%%%%  
+   %%%%--#%%          %%%%%          %%%**%%%%@  
+   %%%%--#%%     %    %%%%%          %%%**%%%%   
+   %%%%:-#%%     %     %%%     %     %%%**%%%%   
+   %%%%::#%%     %:    %%%     %     %%%+*%%%%   
+   %%%%::#%%     %%     %     %%     %%%++%%%%   
+   %%%%::#%%     %%     %     %%     %%%++%%%%   
+   %%%%::#%%     %%%    %    %%%     %%%++%%%%   
+   %%%%::#%%     %%%    %    %%%     %%%++%%%%   
+   %%%%::#%%     %%%%   %   *%%%     %%%++%%%%   
+   %%%%::+%%%%%%%%%%%   %   %%%%%%%%%%%%++%%%%   
+   @%%%%:::::::#%%%%%%% % %%%%%%%%====+++#%%%%   
+    %%%%%%%%%%::::---%%%%%%%-======#%%%%%%%%%%   
+       @%%%%%%%%%%%%---------+%%%%%%%%%%%%       
+           @%%%%%%%%%%%%%%%%%%%%%%%%%%           
+               @%%%%%%%%%%%%%%%%%%               
+                   @%%%%%%%%%%                   
+                       @%%                                                  
+                       
+AUTHOR: MRJORDILICIOUS
+URL:    HTTPS://MRJORDILICIOUS.COM
+TWITCH: HTTPS://TWITCH.TV/MRJORDILICIOUS
+KOFI:   HTTPS://KO-FI.COM/MRJORDILICIOUS
+LINKS:  HTTPS://LINKS.MRJORDILICIOUS.COM
+-->   
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MrJordilicious Customizer</title>
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/MrJordilicious/widgets.mrjordilicious.com/refs/heads/main/_resources/logo.png">
+  <link rel="stylesheet" href="style.css" /> 
+</head>
+<body>
+  <div class="layout">
+    <!-- LEFT: Config panel -->
+    <div class="sidebar">
+      <div class="header">
+        <a href="https://links.mrjordilicious.com" target="blank">
+            <img src="https://raw.githubusercontent.com/MrJordilicious/widgets.mrjordilicious.com/refs/heads/main/_resources/logo.png" alt="Logo" />
+        </a>
+
+        <a href="https://ko-fi.com/mrjordilicious/shop" class="kofi-button" target="_blank">
+            <img src="https://raw.githubusercontent.com/MrJordilicious/widgets.mrjordilicious.com/refs/heads/main/_resources/kofi_symbol.png" alt="Support me on Ko-fi" />
+            <span>Check out my exclusive widgets</span>
+        </a>
+      </div>
+        <h2>CUSTOMIZE YOUR WIDGET</h2>
+        <div>
+          <small>Enter your username for the social platforms that you use. All platforms are optional, so use as many or as little as you like!</small>
+          <br />
+        </div>
+
+      <div class="form-group">
+        <label for="param1">Twitch Username</label>
+        <small>Enter your <b>Twitch</b> username</small>
+        <input type="text" id="param1" placeholder="e.g. mrjordilicious" />
+      </div>
+
+      <div class="form-group">
+        <label for="param2">YouTube Username</label>
+        <small>Enter your <b>YouTube</b> username</small>
+        <input type="text" id="param2" placeholder="e.g. mrjordilicious" />
+      </div>
+
+      <div class="form-group">
+        <label for="param3">Bluesky Username</label>
+        <small>Enter your <b>Bluesky</b> username. Include the suffix (like .bsky.social)</small>
+        <input type="text" id="param3" placeholder="e.g. mrjordilicious.bsky.social" />
+      </div>
+
+      <div class="form-group">
+        <label for="param4">Twitter/X Username</label>
+        <small>Enter your <b>Twitter/X</b> username</small>
+        <input type="text" id="param4" placeholder="e.g. mrjordilicious" />
+      </div>
+
+      <div class="form-group">
+        <label for="param5">Discord Username</label>
+        <small>Enter your <b>Discord</b> username</small>
+        <input type="text" id="param5" placeholder="e.g. mrjordilicious" />
+      </div>
+
+      <div class="form-group">
+        <label for="param6">TikTok Username</label>
+        <small>Enter your <b>TikTok</b> username</small>
+        <input type="text" id="param6" placeholder="e.g. mrjordilicious" />
+      </div>
+
+      <div class="form-group">
+        <label for="param7">Steam Username</label>
+        <small>Enter your <b>Steam</b> username</small>
+        <input type="text" id="param7" placeholder="e.g. mrjordilicious" />
+      </div>
+
+      <div class="form-group">
+        <label for="param8">Xbox Username</label>
+        <small>Enter your <b>Xbox</b> username</small>
+        <input type="text" id="param8" placeholder="e.g. mrjordilicious" />
+      </div>
+
+      <div class="form-group">
+        <label for="param9">Playstation Username</label>
+        <small>Enter your <b>Playstation</b> username</small>
+        <input type="text" id="param9" placeholder="e.g. mrjordilicious" />
+      </div>
+
+      <div class="form-group">
+        <label for="param10">Battle.net Username</label>
+        <small>Enter your <b>Battle.net</b> username</small>
+        <input type="text" id="param10" placeholder="e.g. mrjordilicious#12345" />
+      </div>
+
+      <div class="form-group">
+        <label for="param11">Website URL</label>
+        <small>Enter your <b>website</b> URL</small>
+        <input type="text" id="param11" placeholder="e.g. mrjordilicious.com" />
+      </div>
+
+      <hr class="divider" />
+
+      <label>Copy the URL below</label>
+      <div id="result" class="url-display">https://widgets.mrjordilicious.com/Twitch-Stats-Rotator</div>
+      <button id="copyBtn">Copy URL</button>
+      <span id="copyMsg">Copied to clipboard!</span>
+    </div>
+
+    <!-- RIGHT: Live preview panel -->
+    <div class="preview">
+      <h2>LIVE WIDGET PREVIEW</h2>
+      <iframe id="widgetPreview" src="https://widgets.mrjordilicious.com/Twitch-Stats-Rotator" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

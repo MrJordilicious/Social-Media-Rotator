@@ -19,6 +19,7 @@ const param8El = document.getElementById("param8");
 const param9El = document.getElementById("param9");
 const param10El = document.getElementById("param10");
 const param11El = document.getElementById("param11");
+const param12El = document.getElementById("param12");
 const resultEl = document.getElementById("result");
 const copyBtn = document.getElementById("copyBtn");
 const copyMsg = document.getElementById("copyMsg");
@@ -52,6 +53,9 @@ window.addEventListener("load", () => {
   if (param6El.value.trim()) {
     params.push("tiktok=" + encodeURIComponent(param6El.value.trim()));
   }
+  if (param12El.value.trim()) {
+    params.push("instagram=" + encodeURIComponent(param12El.value.trim()));
+  }
   if (param7El.value.trim()) {
     params.push("steam=" + encodeURIComponent(param7El.value.trim()));
   }
@@ -75,7 +79,7 @@ window.addEventListener("load", () => {
 }
 
 // Update on load and whenever any input changes
-[param1El, param2El, param3El, param4El, param5El, param6El, param7El, param8El, param9El, param10El, param11El].forEach(el => {
+[param1El, param2El, param3El, param4El, param5El, param6El, param12El, param7El, param8El, param9El, param10El, param11El].forEach(el => {
   el.addEventListener("input", updateURL);
 });
 

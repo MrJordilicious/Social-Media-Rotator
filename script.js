@@ -29,6 +29,7 @@ const platforms =   [
                         {param: "twitter", class: "fa-brands fa-x-twitter", color: "#1da1f2"},
                         {param: "discord", class: "fa-brands fa-discord", color: "#5865f2"},
                         {param: "tiktok", class: "fa-brands fa-tiktok", color: "#FE2C55"},
+                        {param: "instagram", class: "fa-brands fa-instagram", color: "#FF0069"},
                         {param: "steam", class: "fa-brands fa-steam", color: "#171a21"},
                         {param: "xbox", class: "fa-brands fa-xbox", color: "#0e7a0d"},
                         {param: "playstation", class: "fa-brands fa-playstation", color: "#003087"},

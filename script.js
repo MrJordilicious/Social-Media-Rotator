@@ -63,10 +63,12 @@ const platforms =   [
 
     // Slide in
     container.style.right = '0px';
+    container.style.paddingLeft = '26px';
 
     // Slide out after 5 seconds
     setTimeout(() => {
-      container.style.right = '-500px';
+      container.style.right = '-1080px';
+      container.style.paddingLeft = '26px';
     }, displayDuration);
   }
 
@@ -113,13 +115,17 @@ const platforms =   [
 
     // Slide in
     container.style.right = '';
+    container.style.paddingRight = '26px';
+    container.style.paddingLeft = '60px';
     container.style.left = '-5px';
     container.style.transition = 'left 0.5s ease';
 
     // Slide out after 5 seconds
     setTimeout(() => {
       container.style.right = '';
-      container.style.left = '-500px';
+      container.style.paddingRight = '26px';
+      container.style.paddingLeft = '60px';
+      container.style.left = '-1080px';
     }, displayDuration);
   }
 

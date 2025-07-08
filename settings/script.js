@@ -20,6 +20,7 @@ const param9El = document.getElementById("param9");
 const param10El = document.getElementById("param10");
 const param11El = document.getElementById("param11");
 const param12El = document.getElementById("param12");
+const locationToggleEl = document.getElementById("location-toggle");
 const resultEl = document.getElementById("result");
 const copyBtn = document.getElementById("copyBtn");
 const copyMsg = document.getElementById("copyMsg");
@@ -71,6 +72,9 @@ window.addEventListener("load", () => {
   if (param11El.value.trim()) {
     params.push("website=" + encodeURIComponent(param11El.value.trim()));
   }
+  if (locationToggleEl && locationToggleEl.checked) {
+    params.push("location=left");
+  }
 
   const fullURL = BASE_URL + (params.length ? "?" + params.join("&") : "");
 
@@ -79,7 +83,7 @@ window.addEventListener("load", () => {
 }
 
 // Update on load and whenever any input changes
-[param1El, param2El, param3El, param4El, param5El, param6El, param12El, param7El, param8El, param9El, param10El, param11El].forEach(el => {
+[param1El, param2El, param3El, param4El, param5El, param6El, param12El, param7El, param8El, param9El, param10El, param11El, locationToggleEl].forEach(el => {
   el.addEventListener("input", updateURL);
 });
 

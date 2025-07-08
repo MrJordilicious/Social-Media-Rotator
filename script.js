@@ -22,6 +22,7 @@ const repeatDelay = 15 * 60 * 1000; // 15 minutes between full loops
 const urlParams = new URLSearchParams(window.location.search);
 
 const username = urlParams.get("username") || ""; // fallback if not provided
+const whatSide = urlParams.get("location") || "right"; // fallback if not provided
 const platforms =   [
                         {param: "twitch", class: "fa-brands fa-twitch", color: "#9146ff"}, 
                         {param: "youtube", class: "fa-brands fa-youtube", color: "#ff0000"},
@@ -41,7 +42,8 @@ const platforms =   [
 // CODE //
 //////////
 
-// Extract filled platforms from URL
+ if (whatSide === "right") {
+  // Extract filled platforms from URL
   const filledPlatforms = platforms
     .map(p => {
       const username = urlParams.get(p.param);
@@ -51,8 +53,8 @@ const platforms =   [
       return null;
     })
     .filter(Boolean);
-
- function showPlatform({ class: iconClass, username, color }) {
+  
+  function showPlatform({ class: iconClass, username, color }) {
     iconSpan.className = `${iconClass}`;
     usernameEl.textContent = username;
 
@@ -87,3 +89,63 @@ const platforms =   [
 
   // Kick it off
   cyclePlatforms();
+ } else if (whatSide === "left") { 
+  // Extract filled platforms from URL
+  const filledPlatforms = platforms
+    .map(p => {
+      const username = urlParams.get(p.param);
+      if (username) {
+        return { ...p, username };
+      }
+      return null;
+    })
+    .filter(Boolean);
+  
+  function showPlatform({ class: iconClass, username, color }) {
+    iconSpan.className = `${iconClass}`;
+    usernameEl.textContent = username;
+
+    // Change rounded corners to right side
+    container.style.borderRadius = '0px 10px 10px 0px';
+
+    // Update background color (with slight transparency)
+    container.style.backgroundColor = `${color}CC`; // CC = 80% opacity
+
+    // Slide in
+    container.style.right = '';
+    container.style.left = '-5px';
+    container.style.transition = 'left 0.5s ease';
+
+    // Slide out after 5 seconds
+    setTimeout(() => {
+      container.style.right = '';
+      container.style.left = '-500px';
+    }, displayDuration);
+  }
+
+  function cyclePlatforms(index = 0) {
+    if (filledPlatforms.length === 0) return;
+
+    showPlatform(filledPlatforms[index]);
+
+    const nextIndex = index + 1;
+
+    setTimeout(() => {
+      if (nextIndex < filledPlatforms.length) {
+        cyclePlatforms(nextIndex);
+      } else {
+        // All done — wait 15 minutes, then restart
+        setTimeout(() => cyclePlatforms(0), repeatDelay);
+      }
+    }, displayDuration + 1000); // 1s buffer for smooth exit
+  }
+
+  // Kick it off
+  cyclePlatforms();
+ }
+ 
+    
+
+  
+
+

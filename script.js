@@ -15,14 +15,12 @@ const usernameEl = document.getElementById('social-username');
 const iconSpan = document.getElementById("social-icon-FA");
 const container = document.getElementById("main-container");
 
-const displayDuration = 5000; // 5 seconds per item
-const repeatDelay = 15 * 60 * 1000; // 15 minutes between full loops
-
 // Get the URL parameters from the current page
 const urlParams = new URLSearchParams(window.location.search);
 
 const username = urlParams.get("username") || ""; // fallback if not provided
 const whatSide = urlParams.get("location") || "right"; // fallback if not provided
+const repeatTime = urlParams.get("delay") || "15"; // fallback if not provided
 const platforms =   [
                         {param: "twitch", class: "fa-brands fa-twitch", color: "#9146ff"}, 
                         {param: "youtube", class: "fa-brands fa-youtube", color: "#ff0000"},
@@ -37,6 +35,9 @@ const platforms =   [
                         {param: "battlenet", class: "fa-brands fa-battle-net", color: "#00B4FF"},
                         {param: "website", class: "fa-solid fa-globe", color: "#666699"}
                     ]
+
+const displayDuration = 5000; // 5 seconds per item
+const repeatDelay = repeatTime * 60 * 1000; // 15 minutes between full loops
 
 //////////
 // CODE //
